@@ -13,8 +13,22 @@
     <div class="space-y-4">
       <button id="randomBtn" class="w-full bg-blue-500 text-white py-2 px-4 rounded">🎲 Random Episode</button>
 
-      <input id="searchInput" type="text" placeholder="Search title or description..." class="w-full border p-2 rounded" />
-      <!-- <button id="searchBtn" class="w-full bg-green-500 text-white py-2 px-4 rounded">🔍 Search</button> -->
+      <div class="flex space-x-2">
+        <button
+          id="searchBtn"
+          class="bg-green-500 text-white py-2 px-4 rounded-l cursor-default"
+          tabindex="-1"
+          aria-hidden="true"
+        >
+          🔍
+        </button>
+        <input
+          id="searchInput"
+          type="text"
+          placeholder="Search title or description..."
+          class="flex-grow border p-2 rounded-r"
+        />
+      </div>
 
       <select id="seasonSelect" class="w-full border p-2 rounded">
         <option value="">Browse by Season</option>
