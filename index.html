@@ -59,7 +59,14 @@
     }
 
     function doSearch() {
-      const q = document.getElementById('searchInput').value.toLowerCase();
+      const q = document.getElementById('searchInput').value.toLowerCase().trim();
+      const container = document.getElementById('results');
+
+      if (q === '') {
+        container.innerHTML = ''; // Clear results if search box is empty
+        return;
+      }
+
       const results = episodes.filter(ep =>
         ep.title.toLowerCase().includes(q) || ep.description.toLowerCase().includes(q)
       );
