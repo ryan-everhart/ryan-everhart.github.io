@@ -14,7 +14,7 @@
       <button id="randomBtn" class="w-full bg-blue-500 text-white py-2 px-4 rounded">🎲 Random Episode</button>
 
       <input id="searchInput" type="text" placeholder="Search title or description..." class="w-full border p-2 rounded" />
-      <button id="searchBtn" class="w-full bg-green-500 text-white py-2 px-4 rounded">🔍 Search</button>
+      <!-- <button id="searchBtn" class="w-full bg-green-500 text-white py-2 px-4 rounded">🔍 Search</button> -->
 
       <select id="seasonSelect" class="w-full border p-2 rounded">
         <option value="">Browse by Season</option>
@@ -71,7 +71,7 @@
       displayEpisodes([rand]);
     });
 
-    document.getElementById('searchBtn').addEventListener('click', doSearch);
+    // document.getElementById('searchBtn').addEventListener('click', doSearch);
 
     document.getElementById('searchInput').addEventListener('input', doSearch);
 
