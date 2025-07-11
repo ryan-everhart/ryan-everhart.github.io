@@ -10,14 +10,27 @@
   <!-- Background Image Layer -->
   <!-- <div class="absolute inset-0 bg-cover bg-center opacity-20 z-0" style="background-image: url('george_phone.png');"></div> -->
 
-  <div class="absolute inset-0 bg-cover bg-center opacity-40 z-0 block sm:hidden"
+  <!-- <div class="absolute inset-0 bg-cover bg-center opacity-40 z-0 block sm:hidden"
        style="background-image: url('george_phone.png');">
   </div>
 
-  <!-- Desktop background -->
   <div class="absolute inset-0 bg-cover bg-center opacity-40 z-0 hidden sm:block"
        style="background-image: url('george.jpg');">
+  </div> -->
+
+  <!-- Background Wrapper (fills screen but doesn’t grow with content) -->
+  <div class="absolute top-0 left-0 w-full h-screen z-0 pointer-events-none overflow-hidden">
+    <!-- Mobile background (iPhone aspect) -->
+    <div class="block sm:hidden w-full h-full bg-cover bg-center bg-no-repeat opacity-40"
+         style="background-image: url('george_phone.png');">
+    </div>
+
+    <!-- Desktop background (16:9 or fill screen) -->
+    <div class="hidden sm:block w-full h-full bg-cover bg-center bg-no-repeat opacity-40"
+         style="background-image: url('george.jpg');">
+    </div>
   </div>
+
 
   <!-- Main Content -->
   <div class="relative z-10 max-w-xl mx-auto">
