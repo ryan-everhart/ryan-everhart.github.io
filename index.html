@@ -6,8 +6,12 @@
   <title>Seinfeld Episode Picker</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body class="bg-gray-100 text-gray-900 font-sans p-4">
-  <div class="max-w-xl mx-auto">
+<body class="bg-gray-100 text-gray-900 font-sans p-4 min-h-screen relative overflow-hidden">
+  <!-- Background Image Layer -->
+  <div class="absolute inset-0 bg-cover bg-center opacity-20 z-0" style="background-image: url('george.jpg');"></div>
+
+  <!-- Main Content -->
+  <div class="relative z-10 max-w-xl mx-auto">
     <h1 class="text-3xl font-bold mb-4 text-center">🎬 Seinfeld Episode Picker</h1>
 
     <div class="space-y-4">
@@ -93,9 +97,7 @@
     });
 
     document.getElementById('searchBtn').addEventListener('click', doSearch);
-
     document.getElementById('searchInput').addEventListener('input', doSearch);
-
     document.getElementById('seasonSelect').addEventListener('change', (e) => {
       const val = parseInt(e.target.value);
       const results = episodes.filter(ep => ep.season === val);
