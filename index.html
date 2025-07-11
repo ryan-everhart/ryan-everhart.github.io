@@ -58,18 +58,22 @@
       });
     }
 
-    document.getElementById('randomBtn').addEventListener('click', () => {
-      const rand = episodes[Math.floor(Math.random() * episodes.length)];
-      displayEpisodes([rand]);
-    });
-
-    document.getElementById('searchBtn').addEventListener('click', () => {
+    function doSearch() {
       const q = document.getElementById('searchInput').value.toLowerCase();
       const results = episodes.filter(ep =>
         ep.title.toLowerCase().includes(q) || ep.description.toLowerCase().includes(q)
       );
       displayEpisodes(results);
+    }
+
+    document.getElementById('randomBtn').addEventListener('click', () => {
+      const rand = episodes[Math.floor(Math.random() * episodes.length)];
+      displayEpisodes([rand]);
     });
+
+    document.getElementById('searchBtn').addEventListener('click', doSearch);
+
+    document.getElementById('searchInput').addEventListener('input', doSearch);
 
     document.getElementById('seasonSelect').addEventListener('change', (e) => {
       const val = parseInt(e.target.value);
